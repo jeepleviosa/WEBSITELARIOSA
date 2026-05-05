@@ -1,0 +1,164 @@
+@font-face {
+    font-family: 'MomsTypewriter';
+    src: url('font/Mom«t___.ttf') format('truetype');
+}
+
+/* ABOUT PAGE */
+
+.portfolio-container {
+    text-align: center;
+    padding: 40px;
+}
+
+.portfolio-title {
+    font-family: 'MomsTypewriter', monospace;
+    color: #b30000;
+    font-size: 40px;
+    letter-spacing: 3px;
+    margin-bottom: 30px;
+}
+
+/* CAROUSEL */
+.carousel {
+    position: relative;
+    max-width: 80%;   /* bigger width */
+    height: 600px;      /* fixed height */
+    margin: auto;
+    overflow: hidden;
+    border: 3px solid #8b0000;
+    box-shadow: 0 0 25px rgba(139,0,0,0.7);
+    background-color: #0d0d0d;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    font-family: 'MomsTypewriter', serif;
+    min-width: 70%; /* smaller than container */
+    height: 80%;
+    margin: auto;
+    opacity: 0.4;
+    transform: scale(0.9);
+    transition: all 0.5s ease;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+/* TEXT */
+.slide h2 {
+    color: #ff1a1a;
+    margin-bottom: 10px;
+}
+
+.slide p, .slide li {
+    color: #ddd;
+    font-size: 16px;
+}
+
+/* BUTTONS */
+.carousel-controls {
+    margin-top: 15px;
+}
+
+.carousel-controls button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+    background-color: black;
+    color: #ff1a1a;
+    border: 1px solid #ff1a1a;
+    padding: 10px 15px;
+    margin: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.carousel-controls button:first-child {
+    left: 100px;
+}
+
+/* Right button */
+.carousel-controls button:last-child {
+    right: 100px;
+}
+
+
+.carousel-controls button:hover {
+    background-color: #ff1a1a;
+    color: black;
+}
+
+
+.slide h2,
+.slide p,
+.slide li {
+    border: 1px solid #8b0000;
+    background-color: rgba(20, 0, 0, 0.6); /* dark red fill */
+    padding: 10px;
+    margin: 8px 0;
+    box-shadow: 0 0 10px rgba(139,0,0,0.4);
+}
+
+
+/* para ni carousel */
+.carousel {
+    overflow: hidden;
+    width: 100%;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    box-sizing: border-box;
+    opacity: 1;
+}
+
+/* THUMBNAIL */
+.thumb {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border: 1px solid #8b0000;
+    margin-bottom: 15px;
+    filter: grayscale(40%) contrast(120%);
+}
+
+a {
+    color: inherit;          /* use your text color */
+    text-decoration: none;   /* remove underline */
+}
+
+/* mobile */
+@media (max-width: 768px) {
+
+    .carousel {
+        height: 350px;
+    }
+
+    .slide {
+        min-width: 90%;
+    }
+
+    .thumb {
+        height: 150px;
+    }
+
+    .portfolio-title {
+        font-size: 28px;
+    }
+
+    .carousel-btn {
+        padding: 10px;
+        font-size: 16px;
+    }
+}

@@ -1,0 +1,137 @@
+@font-face {
+    font-family: 'MomsTypewriter';
+    src: url('font/Mom«t___.ttf') format('truetype');
+}
+
+body {
+    margin: 0;
+    font-family: 'MomsTypewriter', cursive;
+    background-color: #0b0b0b;
+    color: #e5e5e5;
+}
+
+/* HEADER */
+.header {
+    background: linear-gradient(180deg, #1a0000, #000000);
+    text-align: center;
+    padding: 40px 20px;
+    border-bottom: 2px solid #8b0000;
+}
+
+.header h1 {
+    font-family: 'MomsTypewriter', serif;
+    font-size: 48px;
+    margin: 5px;
+    color: #b30000;
+    letter-spacing: 3px;
+    text-shadow: 2px 2px 5px black;
+}
+
+.header p {
+    font-size: 14px;
+    color: #aaa;
+}
+
+.tunga {
+    width: 120px;
+    filter: grayscale(100%) contrast(150%);
+}
+
+/* NAVBAR */
+#navbar {
+    display: flex;
+    justify-content: center;
+    background-color: #120000;
+    border-bottom: 1px solid #8b0000;
+}
+
+#navbar span {
+    margin: 0 15px;
+}
+
+#navbar a {
+    font-family: 'MomsTypewriter';
+    text-decoration: none;
+    color: #e5e5e5;
+    padding: 14px 10px;
+    display: inline-block;
+    transition: 0.3s;
+}
+
+#navbar a:hover {
+    color: #ff1a1a;
+    border-bottom: 2px solid #ff1a1a;
+}
+
+/* MAIN CONTENT */
+.main {
+    padding: 20px;
+    background-color: #0d0d0d;
+}
+
+.main p {
+    line-height: 1.6;
+    color: #d6d6d6;
+}
+
+/* CONTENT IMAGE AREA */
+.Contentimg {
+    background: url("images/Three-Cheers-for-Sweet-Revenge.jpg") center/cover no-repeat;
+    border: 1px solid #8b0000;
+    opacity: 0.6;
+}
+
+/* IFRAME */
+iframe {
+    border: 2px solid #8b0000;
+    box-shadow: 0 0 15px rgba(139, 0, 0, 0.5);
+}
+
+/* FOOTER */
+.footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #120000;
+    color: #999;
+    border-top: 1px solid #8b0000;
+}
+
+/* EXTRA: subtle grunge overlay */
+body::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("images/mcr.png");
+    opacity: 0.05;
+    pointer-events: none;
+    background-size: cover;        /* Makes image cover the whole screen */
+    background-position: center;   /* Keeps it centered */
+    background-repeat: no-repeat;  /* Prevents tiling */
+    background-attachment: fixed;  /* Keeps it fixed while scrolling */
+    
+}
+
+/* mobile */
+@media (max-width: 768px) {
+
+    .header h1 {
+        font-size: 24px;
+    }
+
+    #navbar {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #navbar a {
+        padding: 10px;
+        display: block;
+    }
+
+    iframe {
+        height: 600px;
+    }
+}
